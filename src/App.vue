@@ -1,17 +1,32 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <h1>How fast can you catch me?</h1>
+  <button @click="start" :disabled="isPlaying">play</button>
+  <div v-if="isPlaying">
+    <GameBlock :delay="delay" />
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import GameBlock from "./components/GameBlock.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    GameBlock,
+  },
+  data() {
+    return {
+      isPlaying: false,
+      delay: null,
+    };
+  },
+  methods: {
+    start() {
+      this.isPlaying = true;
+      this.delay = 2000 + Math.random() * 5000;
+    },
+  },
+};
 </script>
 
 <style>
