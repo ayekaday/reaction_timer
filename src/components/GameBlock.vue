@@ -1,18 +1,30 @@
 <template>
-  <div class="block">Click Here {{ delay }}</div>
+  <div class="block" v-if="showBlock">Click here {{ delay }}</div>
 </template>
 
 <script>
 export default {
   props: ["delay"],
+  data() {
+    return {
+      showBlock: false,
+    };
+  },
+  mounted() {
+    setTimeout(() => {
+      this.showBlock = true;
+    }, this.delay);
+  },
 };
 </script>
 
 <style>
 .block {
-  background-color: coral;
-  width: 200px;
+  background-color: greenyellow;
+  color: crimson;
   margin: 100px auto;
-  padding: 200px;
+  width: 300px;
+  height: 100px;
+  padding: 20px;
 }
 </style>

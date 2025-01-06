@@ -10,7 +10,6 @@
 import GameBlock from "./components/GameBlock.vue";
 
 export default {
-  name: "App",
   components: {
     GameBlock,
   },
