@@ -1,7 +1,9 @@
 <template>
   <h1>How fast can you catch me?</h1>
   <button @click="start" :disabled="isPlaying">play</button>
-  <div v-if="isPlaying"><GameBlock :delay="delay" /></div>
+  <div v-if="isPlaying">
+    <GameBlock :delay="delay" />
+  </div>
 </template>
 
 <script>

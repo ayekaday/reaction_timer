@@ -1,6 +1,6 @@
 <template>
   <div class="block" v-if="showBlock" @click="stopTimer">
-    Click me {{ score }}
+    Click Here {{ score }}
   </div>
 </template>
 
@@ -28,7 +28,6 @@ export default {
     },
     stopTimer() {
       clearInterval(this.timer);
-      console.log(this.score);
     },
   },
 };
@@ -36,8 +35,8 @@ export default {
 
 <style>
 .block {
-  background-color: darkgoldenrod;
-  color: cyan;
+  background-color: darkred;
+  color: floralwhite;
   width: 300px;
   height: 200px;
   margin: 100px auto;
