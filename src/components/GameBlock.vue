@@ -34,16 +34,17 @@ export default {
 
 <style scoped>
 .block {
-  background-image: url("@/assets/baby.png");
-  background-color: aqua;
+  background-image: url("@/assets/babybg.png");
+
   color: red;
   text-align: left;
+
   width: 250px;
-  height: 200px;
+  height: 320px;
   margin: 100px auto;
   padding: 20px;
   border-radius: 20px;
-  font-size: xx-large;
+  font-size: 30px;
   font-style: italic;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
