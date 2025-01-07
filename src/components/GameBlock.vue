@@ -1,7 +1,5 @@
 <template>
-  <div class="block" v-if="showBlock" @click="stopTimer">
-    Click Here {{ score }}
-  </div>
+  <div class="block" v-if="showBlock" @click="stopTimer">Click Here</div>
 </template>
 
 <script>
@@ -28,6 +26,7 @@ export default {
     },
     stopTimer() {
       clearInterval(this.timer);
+      this.$emit("endGame", this.score);
     },
   },
 };
@@ -35,10 +34,10 @@ export default {
 
 <style>
 .block {
-  background-color: darkred;
-  color: floralwhite;
-  width: 300px;
-  height: 200px;
+  background-color: olive;
+  color: deepskyblue;
+  width: 400px;
+  height: 300px;
   margin: 100px auto;
   padding: 20px;
 }
