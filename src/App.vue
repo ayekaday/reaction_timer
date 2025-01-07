@@ -53,10 +53,6 @@ h1 {
   color: darkcyan;
 }
 
-.play:hover {
-  color: rgb(116, 3, 3);
-  font-family: cursive;
-}
 body {
   background-color: floralwhite;
 }
