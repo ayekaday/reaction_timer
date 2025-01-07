@@ -1,24 +1,29 @@
 <template>
   <h1>How fast can you catch me?</h1>
-  <button @click="start" :disabled="isPlaying">play</button>
+  <button @click="start" :disabled="isPlaying" class="play">play</button>
   <div v-if="isPlaying">
     <GameBlock :delay="delay" @endGame="endGame" />
   </div>
-  <p>The result {{ score }}</p>
+
+  <div v-if="end">
+    <GameResult :score="score" />
+  </div>
 </template>
 
 <script>
 import GameBlock from "./components/GameBlock.vue";
-
+import GameResult from "./components/GameResult.vue";
 export default {
   components: {
     GameBlock,
+    GameResult,
   },
   data() {
     return {
       isPlaying: false,
       delay: null,
       score: 0,
+      end: false,
     };
   },
   methods: {
@@ -28,6 +33,8 @@ export default {
     },
     endGame(score) {
       this.score = score;
+      this.isPlaying = false;
+      this.end = true;
     },
   },
 };
@@ -41,5 +48,20 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+h1 {
+  color: darkcyan;
+}
+.play {
+  background-color: wheat;
+  color: black;
+  border-color: brown;
+}
+.play:hover {
+  background-color: brown;
+  color: ivory;
+}
+body {
+  background-color: floralwhite;
 }
 </style>

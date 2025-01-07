@@ -32,10 +32,10 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .block {
-  background-color: olive;
-  color: deepskyblue;
+  background-color: crimson;
+  color: whitesmoke;
   width: 400px;
   height: 300px;
   margin: 100px auto;
