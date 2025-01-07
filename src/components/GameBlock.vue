@@ -17,7 +17,7 @@ export default {
   mounted() {
     setTimeout(() => {
       this.showBlock = true;
-      this.startTimer;
+      this.startTimer();
     }, this.delay);
   },
   methods: {
