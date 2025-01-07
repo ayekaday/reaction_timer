@@ -1,5 +1,5 @@
 <template>
-  <div class="block" v-if="showBlock" @click="stopTimer">Click Here</div>
+  <div class="block" v-if="showBlock" @click="stopTimer">Click me</div>
 </template>
 
 <script>
@@ -34,11 +34,17 @@ export default {
 
 <style scoped>
 .block {
-  background-color: crimson;
-  color: whitesmoke;
-  width: 400px;
-  height: 300px;
+  background-image: url("@/assets/baby.png");
+  background-color: aqua;
+  color: red;
+  text-align: left;
+  width: 250px;
+  height: 200px;
   margin: 100px auto;
   padding: 20px;
+  border-radius: 20px;
+  font-size: xx-large;
+  font-style: italic;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
 </style>

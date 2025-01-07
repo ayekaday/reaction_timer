@@ -54,8 +54,8 @@ h1 {
 }
 
 .play:hover {
-  background-color: brown;
-  color: ivory;
+  color: rgb(116, 3, 3);
+  font-family: cursive;
 }
 body {
   background-color: floralwhite;
