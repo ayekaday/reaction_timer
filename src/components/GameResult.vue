@@ -21,4 +21,10 @@ export default {
 h1 {
   color: crimson;
 }
+p {
+  color: royalblue;
+  font-size: medium;
+  font-style: italic;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
 </style>

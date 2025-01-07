@@ -52,11 +52,7 @@ export default {
 h1 {
   color: darkcyan;
 }
-.play {
-  background-color: wheat;
-  color: black;
-  border-color: brown;
-}
+
 .play:hover {
   background-color: brown;
   color: ivory;
