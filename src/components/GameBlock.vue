@@ -35,10 +35,8 @@ export default {
 <style scoped>
 .block {
   background-image: url("@/assets/babybg.png");
-
   color: red;
   text-align: left;
-
   width: 250px;
   height: 320px;
   margin: 100px auto;
